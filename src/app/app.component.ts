@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'it255';
+  public videos = [
+    {
+      title: "Video - 1",
+      description: "Lorem ipsum, lorem ipsum",
+      link: "https://www.youtube.com/embed/ltVOXz4mxOo"
+    },
+    {
+      title: "Video - 2",
+      description: "Lorem ipsum, lorem ipsum",
+      link: "https://www.youtube.com/embed/pZuJKQ6uzHE"
+    },
+    {
+      title: "Video - 3",
+      description: "Lorem ipsum, lorem ipsum",
+      link: "https://www.youtube.com/embed/ltVOXz4mxOo"
+    }
+  ];
 }
