@@ -4,5 +4,12 @@
         <input [(ngModel)]="searchText" placeholder="search text goes here">
     </div>
 
-    <app-video-box  *ngFor="let video of videos | filter : searchText; index as i; " [video]="video"></app-video-box>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let video of videos | filter : searchText; index as i; ">
+            <app-video-box 
+                (videoToDelete)="deleteVideo($event)"
+                (updateVideo)="updateVideo($event)"
+                [video]="video"></app-video-box>
+        </div>
+    </div>
 </div>
