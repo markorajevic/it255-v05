@@ -39,9 +39,14 @@ export class AppComponent {
       return item.title !== video.title
     })
   }
+
   public updateVideo(video: Video) {
     let index = this.videos.findIndex(i => i.title === video.title);
     this.videos[index].title = this._generateString(6);
+  }
+
+  public addVideo(video: Video) {
+    this.videos.push(video);
   }
 
   
