@@ -8,20 +8,9 @@ import { Video } from './models/video';
 })
 export class AppComponent {
   public videos: Video[] = [];
-  private _links: string[] = [
-    'YiUQE5bJKFU',
-    'B32yjbCSVpU',
-    'yG0oBPtyNb0',
-    'f7McpVPlidc',
-    'qhZULM69DIw',
-    'wvUQcnfwUUM'
-  ];
-
 
   constructor(){
-    for(let i = 0; i < 6; i++) {
-      this.videos.push(new Video(this._generateString(3), this._generateString(100), 'https://www.youtube.com/embed/' + this._links[i]))
-    }
+   
   }
 
   private _generateString(length) {
@@ -32,7 +21,7 @@ export class AppComponent {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
- }
+  }
 
   public deleteVideo(video: Video) {
     this.videos = this.videos.filter(item => { 

@@ -7,6 +7,7 @@ import { VideoBoxComponent } from './components/video-box/video-box.component';
 import { FilterPipe } from './helpers/filter-pipe.pipe';
 import { AddVideoComponent } from './components/add-video/add-video.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { YoutubeService } from './services/youtube.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    YoutubeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
