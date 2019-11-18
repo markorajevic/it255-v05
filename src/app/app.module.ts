@@ -18,7 +18,6 @@ import { FilterPipe } from './helpers/filter-pipe.pipe';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
